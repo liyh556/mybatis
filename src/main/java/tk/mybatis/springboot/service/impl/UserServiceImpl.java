@@ -1,6 +1,7 @@
 package tk.mybatis.springboot.service.impl;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,5 +25,10 @@ public class UserServiceImpl implements UserService {
 	public List<SysUser> findAll() {
 		return userMapper.selectAll();
 	}
-	
+
+	@Override
+	public List<Map> selectAllUserTestInterceptor() {
+		return userMapper.selectAllUserTestInterceptor();
+	}
+
 }

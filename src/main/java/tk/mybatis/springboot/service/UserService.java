@@ -1,6 +1,7 @@
 package tk.mybatis.springboot.service;
 
 import java.util.List;
+import java.util.Map;
 
 import tk.mybatis.simple.model.SysUser;
 
@@ -20,4 +21,6 @@ public interface UserService {
 	 * @return
 	 */
 	List<SysUser> findAll();
+
+	List<Map> selectAllUserTestInterceptor();
 }
